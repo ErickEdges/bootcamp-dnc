@@ -1,9 +1,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap');
 
+:root {
+   --azul-dnc: #0c70f2;
+   --preto-dnc: #303030;
+   --cinza-hover: #C9C9C9;
+
+   --fonte-padrao: 'inter'
+}
+
 body {
-   margin: 0%; /*margem externa*/
-   padding: 0%; /*margem interna*/
+    margin: 0%; /*margem externa*/
+    padding: 0%; /*margem interna*/
+
+    background: linear-gradient(360deg, #303030, #0c70f280),
+    linear-gradient(0deg, #0c70f280 19.91%, rgba(12, 112, 242, 0) 24.84%) #303030 ;
+
    }
 
 #Principal {
@@ -11,7 +23,7 @@ body {
    height: 100px;
    border: 1px solid black ;
 
-   background-color: #303030;
+   background-color:var(--preto-dnc);
 
    display: flex;
    justify-content: space-between;
@@ -28,7 +40,7 @@ body {
 }
 
 #Principal div a {
-   font-family: 'Inter';
+   font-family: var(--fonte-padrao);
    font-size: 25px;
    font-weight: 600;
    color: white;
@@ -36,19 +48,19 @@ body {
 
    }
 #Principal div a:hover {
-   color: #CCCCCC;
+   color: var(--cinza-hover);
 }
 
 #Principal button {
    margin-right: 10%;
    margin-top: 1%;
-   background-color: #0C70F2;
+   background-color:var(--azul-dnc);
    border: 0px;
 
    height: 39px;
    width: 80px;
 
-   font-family: 'inter';
+   font-family: var(--fonte-padrao);
    font-size: 20px;
    font-weight: 600;
    color:white;
@@ -56,4 +68,104 @@ body {
    box-shadow: 10px 2px 4px rgba(red, green, blue, alpha) (12, 112, 242, 0.25);
    cursor: pointer;
    }
-  
+
+   /* Seção Principal do site */
+
+   section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      margin-top: 100px;
+      margin-bottom: 100px;
+
+   }
+
+      header {
+         color: white;
+         font-family: var(--fonte-padrao);
+      }
+
+      header h1 {
+         text-transform: uppercase;
+         font-size: 80px;
+         font-weight: bolder;
+
+         margin-bottom: 20px;
+         text-align: center;
+      }
+
+      header h2 {
+         text-align: center;
+         font-size: 40px;
+         font-weight: 700;
+         margin-bottom: 150px;
+      }
+
+      header .invert {
+         background-color: #303030;
+         font-weight: bold;
+         padding: 1px;
+      }
+
+      /*FORMULARIO*/
+
+      form {
+         color:white;
+         font-family: var(--fonte-padrao);
+         font-size: 30px;
+         font-weight: 600;
+         width: 40%;
+      }
+
+      .form-group {
+         display: flex;
+         flex-direction: column;
+         margin-top: 10px;
+         margin-bottom: 10px;
+      }
+
+      form input {
+         border-radius: 10px;
+         height: 50px;
+         border: 0%;
+         font-size:  20px;
+         padding: 2%;
+
+         background-color: rgba(255, 255, 255,0.9);
+      }
+
+      form label {
+         margin: 20%, 0%, 20%, 0%;
+      }
+
+      fomr input ::placeholder{
+         color: rgba(57,57,57,0.5);
+      }
+
+      .checkbox-itens label {
+         font-size: 25px;
+      }
+
+      .checkbox-itens {
+         display: flex;
+         justify-content: space-around;
+      }
+
+      input[type="checkbox"]{
+            transform: scale(1.5);
+            border-radius: 1px;
+      }
+
+      input[type="submit"]{
+         background-color: #0c70f2;
+         width: 100%;
+         height: 90px;
+         font-size: 70%;
+         color:white;
+         margin-top: 100px;
+         box-shadow:rgba(12, 112, 242, 0.25);
+         border-radius: 10px;
+         cursor: pointer; 
+      }
